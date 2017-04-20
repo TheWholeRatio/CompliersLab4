@@ -1,0 +1,33 @@
+public interface ParserTokens {
+public final static short ID=257;
+public final static short NUM=258;
+public final static short VOID=259;
+public final static short INT=260;
+public final static short SEMI=261;
+public final static short PLUS=262;
+public final static short ASSIGN=263;
+public final static short MINUS=264;
+public final static short MULT=265;
+public final static short DIVIDE=266;
+public final static short LTE=267;
+public final static short GTE=268;
+public final static short EQ=269;
+public final static short NOTEQ=270;
+public final static short GT=271;
+public final static short LT=272;
+public final static short LBRACKET=273;
+public final static short RBRACKET=274;
+public final static short LPAREN=275;
+public final static short RPAREN=276;
+public final static short LBRACE=277;
+public final static short RBRACE=278;
+public final static short ELSE=279;
+public final static short IF=280;
+public final static short RETURN=281;
+public final static short WHILE=282;
+public final static short PRINT=283;
+public final static short INPUT=284;
+public final static short COMMA=285;
+public final static short ERROR=286;
+public final static short COMMENT=287;
+}

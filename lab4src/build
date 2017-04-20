@@ -1,0 +1,3 @@
+yacc -d -J cminus.y
+jflex -q cminus.flex
+javac ParseMain.java Parser.java Yylex.java

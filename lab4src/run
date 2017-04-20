@@ -1,0 +1,27 @@
+#!/bin/bash
+# Script to compile and run a Cminus program
+# Usage: ./run program.c
+
+cprogram=$1
+jprogram=${cprogram%%.*}.j
+classfile=Main
+
+echo ==================== $cprogram ====================
+
+echo Deleting $jprogram if it exists
+rm -f $jprogram
+echo Deleting %classfile%.class if it exists
+rm -f $classfile.class
+
+echo Compile C- program $cprogram to Jasmine code $jprogram
+java ParseMain $cprogram > $jprogram
+
+echo Compile Jasmin program $jprogram to Java bytecode
+java -jar jasmin.jar $jprogram
+
+echo Running Java class for $cprogram
+echo OUTPUT
+echo ---------------------------------
+java $classfile
+echo ---------------------------------
+
